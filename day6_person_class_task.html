@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+ //write a person class which holds all the details
+        class person{
+
+            constructor(name,age,contact,email,place)
+            {
+                console.log("inside person class constuctor")
+                this.name =name
+                this.age =age
+                this.contact=contact
+                this.email=email
+                this.place=place
+                console.log(this.name,this.age,this.contact,this.email,this.place)
+                
+            }
+            getDetails(){
+                console.log(`inside method name:${this.name} and age:${27}`)
+            }
+        }
+
+      let user1=new person("mamatha",27,44444,"mmt@gmail.com","punganur")
+      console.log(`person with name ${user1.name} with age group of ${user1.age} and his contact number is ${user1.contact}and his email is ${user1.email} has login in from ${user1.place}`)
+      
+      // destructuring method
+      let {name,age,contact,email,place}=user1
+      console.log(`name:${name}, age:${age},contact=${contact},email=${email}, place:${place}`)
+      user1.getDetails()
+
+
+    </script>
+</body>
+</html>

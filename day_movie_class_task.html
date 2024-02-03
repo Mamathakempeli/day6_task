@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class movie{
+            constructor(title,studio,rating){
+               // console.log(`inside movie constructor`)
+                this.title=title;
+                this.studio=studio;
+                this.rating=rating;
+                if(this.rating==undefined || null)
+                {
+                    this.rating="PG"
+                }
+                //console.log(`title:${this.title},studio=${this.studio},rating=${this.rating}`) 
+            }
+            //c) Write a method getPG, which takes an array of base type Movie as its argument, 
+            //and returns a new array of only those movies in the input array with a rating of "PG".
+            //You may assume the input array is full of Movie instances. The returned array need not be full.
+            getPG(arr){
+                let PGResult=[]
+                for(let i=0;i<arr.length;i++)
+                {
+                    if(arr[i].rating=="PG")
+                    {
+                        PGResult.push(arr[i])
+                    }
+                }
+               return PGResult;
+            }
+        }
+        let filml=new movie("Casino Royale","Eon Productions","PG13")
+        let film2=new movie("abc Royale","STU Productions")
+        let film3=new movie("def Royale","VWX Productions","PG13")
+        let film4=new movie("ghi Royale","XYZ Productions")
+        let film5=new movie("jkl Royale","AARU Productions","PG13")
+        let film6=new movie("mno Royale","MANA Productions","PG13")
+        let film7=new movie("pqr Royale","BOLDE Productions")
+
+        const array=[filml,film2,film3,film4,film5,film6,film7]
+        let result=[]
+        result= filml.getPG(array)
+        console.log(result)
+
+    </script>
+</body>
+</html>
